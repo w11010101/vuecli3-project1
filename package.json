@@ -1,10 +1,14 @@
 {
-  "name": "project1",
+  "name": "hello-world",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
+    "build": "vue-cli-service build --mode nodeEnv",
+    "build-all": "npm run build && npm run build-page && npm run build-pagea && npm run build-pageb",
+    "build-page": "vue-cli-service build page --mode nodeEnv",
+    "build-pagea": "vue-cli-service build pageA --mode nodeEnv",
+    "build-pageb": "vue-cli-service build pageB --mode nodeEnv",
     "test:unit": "vue-cli-service test:unit"
   },
   "dependencies": {
