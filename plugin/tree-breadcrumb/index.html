@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>tree-breadcrumb.js</title>
+	<script type="text/javascript" src="./breadcrumb.js"></script>
+</head>
+<body>
+	<script type="text/javascript">
+		
+
+		var _obj = [
+			{
+				id:1,
+				name:'a',
+				path:'router-a',
+				children:[
+					{
+						id:11,
+						name:'a1',
+						path:'router-a1',
+					},
+					{
+						id:12,
+						name:'a2',
+						children:[
+							{
+								id:111,
+								name:'a11',
+								path:'router-a11',
+							},
+							{
+								id:112,
+								name:'a12',
+								path:'router-a12',
+							}
+						]
+					}
+				]
+			},
+			{
+				id:2,
+				name:'b',
+				path:'router-b',
+				children:[
+					{
+						id:21,
+						name:'b1',
+						path:'router-b1',
+					},
+					{
+						id:22,
+						name:'b2',
+						path:'router-b2',
+					}
+				]
+			}
+		];
+		var _breadcrumb = new breadcrumb({
+			paramName:'path',
+			nodesName:'children',
+
+		});
+		var breadcrumbObj = _breadcrumb.init(_obj,'router-a1');
+		console.log(breadcrumbObj);
+		console.log(_breadcrumb);
+	</script>
+</body>
+</html>

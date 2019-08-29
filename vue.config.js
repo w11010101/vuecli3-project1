@@ -1,3 +1,4 @@
+
 let pageList = {
     // index:{
     //   entry:'./src/main.js',
@@ -63,6 +64,11 @@ module.exports = {
     //   // 'axios': 'axios'
     // }
   },
-  outputDir:buildFileName != 'index'?'dist/'+pageVal:'dist/index'
+  outputDir:buildFileName != 'index'?'dist/'+pageVal:'dist/index',
+  // pwa:{
+  //   name:"pwa-test12",
+  //   themeColor:'#abcdef',
+
+  // }
 
 }
